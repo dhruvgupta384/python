@@ -1,0 +1,107 @@
+import datetime
+def gettime():
+    return datetime.datetime.now()
+def write(a):
+    if a==1:
+        print("press 1 for excersice and 2 for food")
+        b=int(input())
+        if b==1:
+          with open("dhruvvv-ex.txt","a") as w:
+             s=input("type")
+             w.write(str(gettime()) + ":"  + s)
+             print("successfully written")
+
+        elif b==2:
+            with open("dhruvvv-food.txt","a")as w:
+                s=input("type")
+                w.write(str(gettime())+ ":" +s +"\n")
+                print("successfuly written")
+
+
+    elif a==2:
+      print("press 1 for excersice and 2 for food")
+      b=int(input())
+      if b==1:
+          with open("amit-ex.txt","a") as w:
+             s=input("type")
+             w.write(str(gettime() )+ ":"  + s+"\n")
+             print("successfully written")
+      elif b==2:
+            with open("amit-food.txt","a")as w:
+                s=input("type")
+                w.write(str(gettime())+ ":" +s +"\n")
+                print("successfuly written")
+
+    elif a==3:
+        print("press 1 for excersice and 2 for food")
+        b = int(input())
+        if b == 1:
+            with open("ami-ex.txt", "a") as w:
+                s = input("type")
+                w.write(str(gettime()) + ":" + s + "\n")
+                print("successfully written")
+
+        elif b == 2:
+            with open("ami-food.txt", "a")as w:
+                s = input("type")
+                w.write(str(gettime()) + ":" + s + "\n")
+                print("successfuly written")
+
+def retrieve(k):
+    if k==1:
+        print("press 1 for excersice and 2 for food")
+        b = int(input())
+        if b == 1:
+            with open("dhruvvv-ex.txt") as w:
+
+                for i in w:
+                    print(i, end="")
+                print("successfully written")
+
+        elif b== 2:
+            with open("dhruvvv-food.txt")as w:
+
+                for i in w:
+                    print(i, end="")
+
+
+    elif k== 2:
+        print("press 1 for excersice and 2 for food")
+        b = int(input())
+        if b == 1:
+            with open("amit-ex.txt") as w:
+
+                for i in w:
+                    print(i, end="")
+        elif b == 2:
+            with open("amit-food.txt")as w:
+
+                for i in w:
+                    print(i, end="")
+    elif k == 3:
+        print("press 1 for excersice and 2 for food")
+        b = int(input())
+        if b == 1:
+            with open("ami-ex.txt") as w:
+
+                for i in w:
+                    print(i, end="")
+
+        elif b == 2:
+            with open("ami-food.txt")as w:
+
+                for i in w:
+                    print(i, end="")
+
+        else:
+            print("please enter valid ")
+print("press 1 for lock and 2 for retrive")
+d=int(input())
+if d==1:
+    print("enter 1 for dhruvv 2 for amit and 3 for ami")
+    a=int(input())
+    write(a)
+else:
+    print("enter 1 for dhruvv 2 for amit and 3 for ami")
+    k=int(input())
+    retrieve(k)
